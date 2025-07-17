@@ -15,6 +15,6 @@ public class UserController {
 
     @GetMapping("/user")
     public String user(@AuthenticationPrincipal OAuth2User principal) {
-        return "안녕하세요!, " + principal.getAttribute("login") + "님!";
+        return "안녕하세요, " + principal.getAttribute("login") + "님!";
     }
 }
